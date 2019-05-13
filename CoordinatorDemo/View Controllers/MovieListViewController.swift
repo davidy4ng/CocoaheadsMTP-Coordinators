@@ -15,4 +15,8 @@ class MovieListViewController: UIViewController {
             destinationVC.id = 3000
         }
     }
+
+    @IBAction func goToMovieAction(_ sender: Any) {
+        performSegue(withIdentifier: "goToMovie", sender: sender)
+    }
 }

@@ -91,7 +91,7 @@
                                 <rect key="frame" x="96" y="370" width="183" height="30"/>
                                 <state key="normal" title="Go to MovieViewController"/>
                                 <connections>
-                                    <segue destination="QEh-ti-8JH" kind="show" identifier="goToMovie" id="PG1-Z1-lSf"/>
+                                    <action selector="goToMovieAction:" destination="w3r-dd-1bG" eventType="touchUpInside" id="pRd-Hb-xFB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -105,6 +105,9 @@
                         <viewLayoutGuide key="safeArea" id="5WN-Rf-gcO"/>
                     </view>
                     <navigationItem key="navigationItem" id="qNT-F0-Qw6"/>
+                    <connections>
+                        <segue destination="QEh-ti-8JH" kind="show" identifier="goToMovie" id="f71-VI-dUp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3uZ-2Q-CBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
