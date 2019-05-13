@@ -1,0 +1,18 @@
+//
+//  MovieListViewController.swift
+//  CoordinatorDemo
+//
+//  Created by David Yang on 13/05/2019.
+//  Copyright © 2019 David Yang. All rights reserved.
+//
+
+import UIKit
+
+class MovieListViewController: UIViewController {
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToMovie", let destinationVC = segue.destination as? MovieViewController {
+            destinationVC.id = 3000
+        }
+    }
+}
