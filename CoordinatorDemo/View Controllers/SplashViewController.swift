@@ -8,22 +8,21 @@
 
 import UIKit
 
-class SplashViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+class SplashViewController: UIViewController, Storyboarded {
+    weak var coordinator: MainAppCoordinator?
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         // wait for 2 seconds
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-
-            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            if let vc = mainStoryboard.instantiateInitialViewController() {
-                appDelegate.window?.rootViewController = vc
-            }
+//            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+//
+//            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            if let vc = mainStoryboard.instantiateInitialViewController() {
+//                appDelegate.window?.rootViewController = vc
+//            }
+            self.coordinator?.showMainTab()
         }
     }
 }

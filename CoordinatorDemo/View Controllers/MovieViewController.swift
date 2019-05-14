@@ -8,7 +8,8 @@
 
 import UIKit
 
-class MovieViewController: UIViewController {
+class MovieViewController: UIViewController, Storyboarded {
+    weak var coordinator: NavigationCoordinator?
     var id: Int?
 
     @IBOutlet weak var movieIdLabel: UILabel! {

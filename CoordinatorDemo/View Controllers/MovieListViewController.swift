@@ -8,15 +8,17 @@
 
 import UIKit
 
-class MovieListViewController: UIViewController {
+class MovieListViewController: UIViewController, Storyboarded {
+    weak var coordinator: NavigationCoordinator?
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToMovie", let destinationVC = segue.destination as? MovieViewController {
-            destinationVC.id = 3000
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "goToMovie", let destinationVC = segue.destination as? MovieViewController {
+//            destinationVC.id = 3000
+//        }
+//    }
 
     @IBAction func goToMovieAction(_ sender: Any) {
-        performSegue(withIdentifier: "goToMovie", sender: sender)
+//        performSegue(withIdentifier: "goToMovie", sender: sender)
+        coordinator?.showMovieWithId(3000)
     }
 }
