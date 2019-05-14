@@ -9,7 +9,7 @@
 import UIKit
 
 extension NavigationCoordinator {
-    func showMovieWithId(_ id: Int) {
+    func showMovieWithId(_ id: Int?) {
         let movieVC = MovieViewController.instantiate()
         movieVC.coordinator = self
         movieVC.id = id

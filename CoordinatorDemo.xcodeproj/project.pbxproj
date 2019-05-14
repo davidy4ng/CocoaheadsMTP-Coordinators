@@ -28,6 +28,7 @@
 		63CA155E228B486D000FA9B4 /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA155D228B486D000FA9B4 /* MainTabCoordinator.swift */; };
 		63CA1560228B4879000FA9B4 /* MainAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA155F228B4879000FA9B4 /* MainAppCoordinator.swift */; };
 		63CA1562228B48D9000FA9B4 /* NavigationCoordinator+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA1561228B48D9000FA9B4 /* NavigationCoordinator+Extensions.swift */; };
+		63CA1565228B4C36000FA9B4 /* URL+Deeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA1564228B4C36000FA9B4 /* URL+Deeplink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		63CA155D228B486D000FA9B4 /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
 		63CA155F228B4879000FA9B4 /* MainAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppCoordinator.swift; sourceTree = "<group>"; };
 		63CA1561228B48D9000FA9B4 /* NavigationCoordinator+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationCoordinator+Extensions.swift"; sourceTree = "<group>"; };
+		63CA1564228B4C36000FA9B4 /* URL+Deeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Deeplink.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				63CA15482289D908000FA9B4 /* Coordinator.swift */,
+				63CA1564228B4C36000FA9B4 /* URL+Deeplink.swift */,
 				63CA1561228B48D9000FA9B4 /* NavigationCoordinator+Extensions.swift */,
 				63CA1557228B4842000FA9B4 /* MovieNavigationCoordinator.swift */,
 				63CA1559228B4854000FA9B4 /* FavoritesNavigationCoordinator.swift */,
@@ -275,6 +278,7 @@
 				63CA1558228B4842000FA9B4 /* MovieNavigationCoordinator.swift in Sources */,
 				63999A3B2289BE630015FB33 /* AppDelegate.swift in Sources */,
 				63999A5B2289BF070015FB33 /* SplashViewController.swift in Sources */,
+				63CA1565228B4C36000FA9B4 /* URL+Deeplink.swift in Sources */,
 				63CA155C228B485E000FA9B4 /* SettingsNavigationCoordinator.swift in Sources */,
 				63999A662289C77C0015FB33 /* FavoritesViewController.swift in Sources */,
 				63999A642289C7690015FB33 /* MovieViewController.swift in Sources */,

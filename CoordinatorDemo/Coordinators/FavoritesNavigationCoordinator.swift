@@ -9,11 +9,15 @@
 import UIKit
 
 class FavoritesNavigationCoordinator: NavigationCoordinator {
-    override func start() {
+    override func start(_ deeplink: URL? = nil) {
         let vc = FavoritesViewController.instantiate()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
 
         navigationController.tabBarItem = UITabBarItem(title: "Favorites", image: nil, selectedImage: nil)
+    }
+
+    override func handle(_ deeplink: URL?) {
+        // do nothing
     }
 }

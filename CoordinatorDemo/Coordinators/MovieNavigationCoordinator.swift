@@ -9,11 +9,20 @@
 import UIKit
 
 class MovieNavigationCoordinator: NavigationCoordinator {
-    override func start() {
+    override func start(_ deeplink: URL? = nil) {
         let vc = MovieListViewController.instantiate()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
 
         navigationController.tabBarItem = UITabBarItem(title: "Movie List", image: nil, selectedImage: nil)
+    }
+
+    override func handle(_ deeplink: URL?) {
+        switch deeplink?.tab {
+        case .movie(let id)?:
+            showMovieWithId(id)
+        default:
+            break
+        }
     }
 }

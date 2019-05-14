@@ -9,7 +9,7 @@
 import UIKit
 
 class MainTabCoordinator: TabCoordinator {
-    override func start() {
+    override func start(_ deeplink: URL? = nil) {
         let navigationCoordinators: [NavigationCoordinator] = [
             MovieNavigationCoordinator(),
             FavoritesNavigationCoordinator(),
@@ -19,5 +19,30 @@ class MainTabCoordinator: TabCoordinator {
         navigationCoordinators.forEach { $0.start() }
         tabController.viewControllers = navigationCoordinators.map { $0.navigationController }
         childCoordinators = navigationCoordinators
+
+        handle(deeplink)
+    }
+
+    override func handle(_ deeplink: URL?) {
+        let idx: Int?
+
+        switch deeplink?.tab {
+        case .movie?:
+            idx = childCoordinators.firstIndex(where: { $0 is MovieNavigationCoordinator })
+        case .favorites?:
+            idx = childCoordinators.firstIndex(where: { $0 is FavoritesNavigationCoordinator })
+        case .settings?:
+            idx = childCoordinators.firstIndex(where: { $0 is SettingsNavigationCoordinator })
+        default:
+            idx = nil
+        }
+
+        if let idx = idx {
+            // select the tab
+            tabController.selectedIndex = idx
+            // call handle(_:)
+            let coordinator = childCoordinators[idx]
+            coordinator.handle(deeplink)
+        }
     }
 }

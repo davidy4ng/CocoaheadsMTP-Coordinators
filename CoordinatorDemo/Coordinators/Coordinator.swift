@@ -10,7 +10,8 @@ import UIKit
 
 protocol Coordinator {
     var childCoordinators: [Coordinator] { get set }
-    func start()
+    func start(_ deeplink: URL?)
+    func handle(_ deeplink: URL?)
 }
 
 // MARK:- Base coordinators
@@ -20,8 +21,12 @@ class AppCoordinator: Coordinator {
 
     let window = UIWindow()
 
-    func start() {
+    func start(_ deeplink: URL? = nil) {
         fatalError("Subclasses should override start method")
+    }
+
+    func handle(_ deeplink: URL?) {
+        fatalError("Subclasses should override handle method")
     }
 }
 
@@ -30,8 +35,12 @@ class TabCoordinator: Coordinator {
 
     let tabController = UITabBarController()
 
-    func start() {
+    func start(_ deeplink: URL? = nil) {
         fatalError("Subclasses should override start method")
+    }
+
+    func handle(_ deeplink: URL?) {
+        fatalError("Subclasses should override handle method")
     }
 }
 
@@ -40,8 +49,12 @@ class NavigationCoordinator: Coordinator {
 
     let navigationController = UINavigationController()
 
-    func start() {
+    func start(_ deeplink: URL? = nil) {
         fatalError("Subclasses should override start method")
+    }
+
+    func handle(_ deeplink: URL?) {
+        fatalError("Subclasses should override handle method")
     }
 }
 
