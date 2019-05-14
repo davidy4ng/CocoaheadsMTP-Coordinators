@@ -19,6 +19,15 @@
 		63999A642289C7690015FB33 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63999A632289C7690015FB33 /* MovieViewController.swift */; };
 		63999A662289C77C0015FB33 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63999A652289C77C0015FB33 /* FavoritesViewController.swift */; };
 		63999A682289C7970015FB33 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63999A672289C7970015FB33 /* SettingsViewController.swift */; };
+		63CA15492289D908000FA9B4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA15482289D908000FA9B4 /* Coordinator.swift */; };
+		63CA154D2289E9EF000FA9B4 /* UIStoryboard+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA154C2289E9EF000FA9B4 /* UIStoryboard+Utils.swift */; };
+		63CA154F2289EB7A000FA9B4 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA154E2289EB7A000FA9B4 /* Storyboarded.swift */; };
+		63CA1558228B4842000FA9B4 /* MovieNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA1557228B4842000FA9B4 /* MovieNavigationCoordinator.swift */; };
+		63CA155A228B4854000FA9B4 /* FavoritesNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA1559228B4854000FA9B4 /* FavoritesNavigationCoordinator.swift */; };
+		63CA155C228B485E000FA9B4 /* SettingsNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA155B228B485E000FA9B4 /* SettingsNavigationCoordinator.swift */; };
+		63CA155E228B486D000FA9B4 /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA155D228B486D000FA9B4 /* MainTabCoordinator.swift */; };
+		63CA1560228B4879000FA9B4 /* MainAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA155F228B4879000FA9B4 /* MainAppCoordinator.swift */; };
+		63CA1562228B48D9000FA9B4 /* NavigationCoordinator+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA1561228B48D9000FA9B4 /* NavigationCoordinator+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +57,15 @@
 		63999A632289C7690015FB33 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		63999A652289C77C0015FB33 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		63999A672289C7970015FB33 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		63CA15482289D908000FA9B4 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		63CA154C2289E9EF000FA9B4 /* UIStoryboard+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Utils.swift"; sourceTree = "<group>"; };
+		63CA154E2289EB7A000FA9B4 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		63CA1557228B4842000FA9B4 /* MovieNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieNavigationCoordinator.swift; sourceTree = "<group>"; };
+		63CA1559228B4854000FA9B4 /* FavoritesNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesNavigationCoordinator.swift; sourceTree = "<group>"; };
+		63CA155B228B485E000FA9B4 /* SettingsNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigationCoordinator.swift; sourceTree = "<group>"; };
+		63CA155D228B486D000FA9B4 /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
+		63CA155F228B4879000FA9B4 /* MainAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppCoordinator.swift; sourceTree = "<group>"; };
+		63CA1561228B48D9000FA9B4 /* NavigationCoordinator+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationCoordinator+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				63999A3A2289BE630015FB33 /* AppDelegate.swift */,
+				63CA1556228B4832000FA9B4 /* Coordinators */,
+				63CA1563228B4902000FA9B4 /* Utils */,
 				63999A602289C7320015FB33 /* View Controllers */,
 				63999A3E2289BE630015FB33 /* Splash.storyboard */,
 				63999A5C2289BF490015FB33 /* Main.storyboard */,
@@ -120,6 +140,29 @@
 				63999A672289C7970015FB33 /* SettingsViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		63CA1556228B4832000FA9B4 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				63CA15482289D908000FA9B4 /* Coordinator.swift */,
+				63CA1561228B48D9000FA9B4 /* NavigationCoordinator+Extensions.swift */,
+				63CA1557228B4842000FA9B4 /* MovieNavigationCoordinator.swift */,
+				63CA1559228B4854000FA9B4 /* FavoritesNavigationCoordinator.swift */,
+				63CA155B228B485E000FA9B4 /* SettingsNavigationCoordinator.swift */,
+				63CA155D228B486D000FA9B4 /* MainTabCoordinator.swift */,
+				63CA155F228B4879000FA9B4 /* MainAppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		63CA1563228B4902000FA9B4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				63CA154E2289EB7A000FA9B4 /* Storyboarded.swift */,
+				63CA154C2289E9EF000FA9B4 /* UIStoryboard+Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,12 +268,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63CA1562228B48D9000FA9B4 /* NavigationCoordinator+Extensions.swift in Sources */,
 				63999A622289C74B0015FB33 /* MovieListViewController.swift in Sources */,
+				63CA154D2289E9EF000FA9B4 /* UIStoryboard+Utils.swift in Sources */,
+				63CA155E228B486D000FA9B4 /* MainTabCoordinator.swift in Sources */,
+				63CA1558228B4842000FA9B4 /* MovieNavigationCoordinator.swift in Sources */,
 				63999A3B2289BE630015FB33 /* AppDelegate.swift in Sources */,
 				63999A5B2289BF070015FB33 /* SplashViewController.swift in Sources */,
+				63CA155C228B485E000FA9B4 /* SettingsNavigationCoordinator.swift in Sources */,
 				63999A662289C77C0015FB33 /* FavoritesViewController.swift in Sources */,
 				63999A642289C7690015FB33 /* MovieViewController.swift in Sources */,
+				63CA154F2289EB7A000FA9B4 /* Storyboarded.swift in Sources */,
 				63999A682289C7970015FB33 /* SettingsViewController.swift in Sources */,
+				63CA155A228B4854000FA9B4 /* FavoritesNavigationCoordinator.swift in Sources */,
+				63CA1560228B4879000FA9B4 /* MainAppCoordinator.swift in Sources */,
+				63CA15492289D908000FA9B4 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
